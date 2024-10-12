@@ -60,6 +60,9 @@ namespace DRAMSim
 			int getIniUint(const std::string &field, unsigned int *val);
 			int getIniUint64(const std::string &field, uint64_t *val);
 			int getIniFloat(const std::string &field, float *val);
+
+            // Returns the memory transaction size. Needed by zsim to compute used memory bandwidth
+            unsigned getTransactionSize();
 	};
 	MultiChannelMemorySystem *getMemorySystemInstance(const string &dev, const string &sys, const string &pwd, const string &trc, unsigned megsOfMemory, std::string *visfilename=NULL);
 }

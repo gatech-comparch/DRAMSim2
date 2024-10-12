@@ -64,6 +64,7 @@ class MultiChannelMemorySystem : public SimulatorObject
 
 	void InitOutputFiles(string tracefilename);
 	void setCPUClockSpeed(uint64_t cpuClkFreqHz);
+    unsigned getTransactionSize();
 
 	//output file
 	std::ofstream visDataOut;

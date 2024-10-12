@@ -531,6 +531,10 @@ int MultiChannelMemorySystem::getIniFloat(const std::string& field, float *val)
 	return IniReader::getFloat(field, val);
 }
 
+unsigned MultiChannelMemorySystem::getTransactionSize() {
+    return (TRANSACTION_SIZE);
+}
+
 namespace DRAMSim {
 MultiChannelMemorySystem *getMemorySystemInstance(const string &dev, const string &sys, const string &pwd, const string &trc, unsigned megsOfMemory, string *visfilename) 
 {
